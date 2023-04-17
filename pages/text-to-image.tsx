@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import axios from 'axios';
 
+ import Image from"next/image"
 
-function img_generator() {
+function Img_generator() {
   const [inputValue, setInputValue] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
@@ -54,7 +54,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       )}
       {imageUrl && !loading && (
         <div className="mt-12 flex justify-center">
-          <img src={imageUrl} alt="Generated image" className="rounded-xl shadow-lg" />
+          <Image src={imageUrl} alt="Generated image" className="rounded-xl shadow-lg" />
         </div>
       )}
       <style jsx>{`
@@ -76,4 +76,4 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   );
 }
 
-export default img_generator;
+export default Img_generator;

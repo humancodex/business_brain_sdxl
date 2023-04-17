@@ -36,9 +36,9 @@ export default function Home() {
           className="mx-auto mb-5 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-violet-200"
         >
           <Github className="h-5 w-5 text-[#0b0c0d]" />
-          <p className="text-sm font-semibold text-[#0a080899]">
+          <Link className="text-sm font-semibold text-[#0a080899]" href={"https://github.com/tech-tinker/business_brain_sdxl"}>
             Introducing BusinessBrain
-          </p>
+          </Link>
         </motion.a>
         <motion.h1
           className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
@@ -72,9 +72,26 @@ export default function Home() {
           </Link>
        
         </motion.div>
+             <motion.div
+          className="mx-auto mt-6 flex items-center justify-center space-x-5"
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
+        >
+
+
+          <Link
+            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
+            href="/paint"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           
+            <p>Try InPainter !</p>
+          </Link>
+       
+        </motion.div>
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-      <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+      {/* <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -90,7 +107,7 @@ export default function Home() {
             large={large}
           />
         ))}
-      </div>
+      </div> */}
     </Layout>
   );
 }
