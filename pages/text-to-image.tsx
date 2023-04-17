@@ -1,30 +1,32 @@
 import { useState } from 'react';
+import axios from 'axios';
+
 
 function img_generator() {
   const [inputValue, setInputValue] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (event:any) => {
-    event.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    const response = await fetch('/api/stablediffusion/index.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ value: inputValue }),
-    });
+  // make the API request with the value of the input field
+  const response = await fetch('/api/predictions/text_to_image', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ inputValue })
+  });
 
-    if (response.ok) {
-      const data = await response.json();
-      setImageUrl(data[0]);
-    } else {
-      console.error('Error:', response.statusText);
-    }
-    setLoading(false);
-  };
+  if (response.ok) {
+    const imageData = await response.json();
+    console.log(imageData)
+    setImageUrl(imageData); // pass the string value to setImageUrl
+  } else {
+    console.error('Error:', response);
+  }
+};
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
