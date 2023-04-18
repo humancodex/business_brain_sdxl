@@ -91,7 +91,7 @@ export default function Home() {
         </motion.div> */}
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-        <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+        <div className="my-10 grid justify-center w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -112,42 +112,7 @@ export default function Home() {
   );
 }
 
-const features = [
-    {
-    title: "Built-in Auth + Database",
-    description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
-    demo: (
-               <motion.div
-          className="mx-auto mt-6 flex items-center justify-center space-x-5"
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
-        >
-
-
-          <Link
-            className="group flex max-w-fit items-center justify-center space-x-5 rounded-full border border-black bg-black px-10 py-10text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href="/paint"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-           
-            <p>Try InPainter !</p>
-          </Link>
-       
-        </motion.div>
-    ),},
-  {
-    title: "",
-    description:
-      "",
-    large: true,
-  },
-  {
-    title: "Performance first",
-    description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
-    demo: <WebVitals />,
-  },
+const features = [ 
   {
     title: "GENERATE THE IMAGES FOR PRINT",
     description:
@@ -171,7 +136,68 @@ const features = [
        
         </motion.div>
     ),
+ 
   },
+    {
+    title: "Built-in Auth + Database",
+    description:
+      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+   
+    demo: (
+               <motion.div
+          className="mx-auto mt-6 flex items-center justify-center space-x-5"
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
+        >
+
+
+          <Link
+            className="group flex max-w-fit items-center justify-center space-x-5 rounded-full border border-black bg-black px-10 py-10text-sm text-white transition-colors hover:bg-white hover:text-black"
+            href="/paint"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           
+            <p>Try InPainter !</p>
+          </Link>
+       
+        </motion.div>
+    ),},
+  {
+    title: "another feature",
+    description:
+      "",
+    large: true
+  },
+  // {
+  //   title: "Performance first",
+  //   description:
+  //     "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
+  //   demo: <WebVitals />,
+  // },
+  // {
+  //   title: "GENERATE THE IMAGES FOR PRINT",
+  //   description:
+  //     "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
+  //   demo: (
+  //     <motion.div
+  //         className="mx-auto mt-6 flex items-center justify-center space-x-5"
+  //         variants={FADE_DOWN_ANIMATION_VARIANTS}
+  //       >
+
+
+  //         <Link
+  //           className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
+  //           href="/text-to-image"
+  //           target="_blank"
+  //           rel="noopener noreferrer"
+  //         >
+           
+  //           <p>Try this generator !</p>
+  //         </Link>
+       
+  //       </motion.div>
+  //   ),
+  // },
 
   // {
   //   title: "Hooks, utilities, and more",
