@@ -50,7 +50,7 @@ export async function getServerSideProps({
     hostname,
     users: [],
   });
-
+console.log("entrE")
   res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser
   res.write(sitemap);
