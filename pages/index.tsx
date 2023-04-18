@@ -30,15 +30,15 @@ export default function Home() {
       >
         <motion.a
           variants={FADE_DOWN_ANIMATION_VARIANTS}
-          href=""
+          href="https://github.com/tech-tinker/business_brain_sdxl"
           target="_blank"
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-violet-200"
         >
           <Github className="h-5 w-5 text-[#0b0c0d]" />
-          <a className="text-sm font-semibold text-[#0a080899]" href={"https://github.com/tech-tinker/business_brain_sdxl"}>
+       
             Introducing BusinessBrain
-          </a>
+         
         </motion.a>
         <motion.h1
           className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
@@ -51,11 +51,11 @@ export default function Home() {
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-         AGENTS FOR THE CREATION 
+          THE IA MODELATOR PRINT-TO-ORDER 
 
           </Balancer>
         </motion.h2>
-        <motion.div
+        {/* <motion.div
           className="mx-auto mt-6 flex items-center justify-center space-x-5"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
@@ -88,10 +88,10 @@ export default function Home() {
             <p>Try InPainter !</p>
           </Link>
        
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-       {/* <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+        <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -107,16 +107,39 @@ export default function Home() {
             large={large}
           />
         ))}
-      </div>  */}
+      </div>  
     </Layout>
   );
 }
 
 const features = [
-  {
-    title: "Beautiful, reusable components",
+    {
+    title: "Built-in Auth + Database",
     description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), and [Framer Motion](https://framer.com/motion)",
+      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+    demo: (
+               <motion.div
+          className="mx-auto mt-6 flex items-center justify-center space-x-5"
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
+        >
+
+
+          <Link
+            className="group flex max-w-fit items-center justify-center space-x-5 rounded-full border border-black bg-black px-10 py-10text-sm text-white transition-colors hover:bg-white hover:text-black"
+            href="/paint"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           
+            <p>Try InPainter !</p>
+          </Link>
+       
+        </motion.div>
+    ),},
+  {
+    title: "",
+    description:
+      "",
     large: true,
   },
   {
@@ -126,44 +149,43 @@ const features = [
     demo: <WebVitals />,
   },
   {
-    title: "One-click Deploy",
+    title: "GENERATE THE IMAGES FOR PRINT",
     description:
       "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
     demo: (
-      <a href={DEPLOY_URL}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={120}
-        />
-      </a>
+      <motion.div
+          className="mx-auto mt-6 flex items-center justify-center space-x-5"
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
+        >
+
+
+          <Link
+            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
+            href="/text-to-image"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           
+            <p>Try this generator !</p>
+          </Link>
+       
+        </motion.div>
     ),
   },
-  {
-    title: "Built-in Auth + Database",
-    description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
-    demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
-        <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
-      </div>
-    ),
-  },
-  {
-    title: "Hooks, utilities, and more",
-    description:
-      "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
-    demo: (
-      <div className="grid grid-flow-col grid-rows-3 gap-10 p-10">
-        <span className="font-mono font-semibold">useIntersectionObserver</span>
-        <span className="font-mono font-semibold">useLocalStorage</span>
-        <span className="font-mono font-semibold">useScroll</span>
-        <span className="font-mono font-semibold">nFormatter</span>
-        <span className="font-mono font-semibold">capitalize</span>
-        <span className="font-mono font-semibold">truncate</span>
-      </div>
-    ),
-  },
+
+  // {
+  //   title: "Hooks, utilities, and more",
+  //   description:
+  //     "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
+  //   demo: (
+  //     <div className="grid grid-flow-col grid-rows-3 gap-10 p-10">
+  //       <span className="font-mono font-semibold">useIntersectionObserver</span>
+  //       <span className="font-mono font-semibold">useLocalStorage</span>
+  //       <span className="font-mono font-semibold">useScroll</span>
+  //       <span className="font-mono font-semibold">nFormatter</span>
+  //       <span className="font-mono font-semibold">capitalize</span>
+  //       <span className="font-mono font-semibold">truncate</span>
+  //     </div>
+  //   ),
+  // },
 ];
