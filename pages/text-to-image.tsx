@@ -22,7 +22,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   if (response.ok) {
     const imageData = await response.json();
     console.log(imageData)
-    setImageUrl(imageData); // pass the string value to setImageUrl
+    setImageUrl(imageData[0]); // pass the string value to setImageUrl
   } else {
     console.error('Error:', response);
   }
@@ -53,9 +53,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
       )}
       {imageUrl && !loading && (
-        <div className="mt-12 flex justify-center">
-          <Image src={imageUrl} alt="Generated image" className="rounded-xl shadow-lg" />
-        </div>
+       <div className='mt-12 flex justify-center'>
+          <Image src={imageUrl} alt="Generated image" className="rounded-xl shadow-lg " width={500}
+      height={500}/>
+      </div>
+        
       )}
       <style jsx>{`
         .loader {
