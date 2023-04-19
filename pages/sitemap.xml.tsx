@@ -36,7 +36,7 @@ export async function getServerSideProps({
   req: NextApiRequest;
   res: NextApiResponse;
 }) {
-  const hostname = `https://precedent.dev`;
+  const hostname = `https://LaunchMate.com`;
 
   // Generate dynamic data for the sitemap
   //   const users = await prisma.user.findMany({
@@ -50,7 +50,7 @@ export async function getServerSideProps({
     hostname,
     users: [],
   });
-console.log("entrE")
+
   res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser
   res.write(sitemap);
