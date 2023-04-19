@@ -10,14 +10,12 @@ Business Brain is a AI platform for a business creative model generation
 
 ## Tech Stack + Features
 
-https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
-
 ### Frameworks
 
 - [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
-- [Auth.js](https://authjs.dev/) – Handle user authentication with ease with providers like Google, Twitter, GitHub, etc.
 - [Prisma](https://www.prisma.io/) – Typescript-first ORM for Node.js
-
+- [PlanetScale](https://www.prisma.io/) – Database
+- [Clerck](https://www.prisma.io/) – Authentication made easy
 ### Platforms
 
 - [Vercel](https://vercel.com/) – Easily preview & deploy changes with git
