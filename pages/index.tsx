@@ -116,7 +116,7 @@ const features = [
   {
     title: "GENERATE THE IMAGES FOR PRINT",
     description:
-      "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
+      "",
     demo: (
       <motion.div
           className="mx-auto mt-6 flex items-center justify-center space-x-5"
@@ -139,17 +139,15 @@ const features = [
  
   },
     {
-    title: "Built-in Auth + Database",
+    title: "",
     description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "",
    
     demo: (
                <motion.div
           className="mx-auto mt-6 flex items-center justify-center space-x-5"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-
-
           <Link
             className="group flex max-w-fit items-center justify-center space-x-5 rounded-full border border-black bg-black px-10 py-10text-sm text-white transition-colors hover:bg-white hover:text-black"
             href="/paint"
